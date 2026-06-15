@@ -1,15 +1,10 @@
-# ============================================================
-#   Expense Tracker — Task 2
-#   Python Programming Internship
-# ============================================================
-
-import csv                      # built-in module to read/write CSV files
-import os                       # to check if the file exists
+import csv 
+import os 
 
 FILE_NAME = "expenses.csv"      # all expenses will be saved in this file
 
 
-# ── Function 1: Add an expense ───────────────────────────────
+# Function 1: Add an expense 
 def add_expense():
     desc   = input("Enter expense description (e.g. Coffee): ")
     amount = input("Enter amount (e.g. 50): ")
@@ -22,7 +17,7 @@ def add_expense():
     print("Expense added successfully!")
 
 
-# ── Function 2: View all expenses ────────────────────────────
+# Function 2: View all expenses
 def view_expenses():
     # Check if the file exists at all
     if not os.path.exists(FILE_NAME):
@@ -43,7 +38,7 @@ def view_expenses():
     print("-------------------------------")
 
 
-# ── Function 3: View total spent ─────────────────────────────
+# Function 3: View total spent 
 def total_expenses():
     if not os.path.exists(FILE_NAME):
         print("No expenses found. Add one first!")
@@ -60,7 +55,7 @@ def total_expenses():
     print(f"\n  Total Amount Spent: ₹{total}")
 
 
-# ── Function 4: Clear all expenses ───────────────────────────
+#Function 4: Clear all expenses
 def clear_expenses():
     confirm = input("Are you sure you want to clear all expenses? (yes/no): ")
     if confirm.lower() == "yes":
@@ -71,7 +66,7 @@ def clear_expenses():
         print("Cancelled.")
 
 
-# ── Menu ──────────────────────────────────────────────────────
+# Menu 
 def main():
     while True:
         print("\n========================================")
